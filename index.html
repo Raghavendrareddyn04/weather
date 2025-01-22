@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="creator-name">
+            <marquee scrollamount="10">Weather</marquee>
+        </div>
+        <h1 id="cityName">Weather App</h1>
+        <!-- Search Feature -->
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name" />
+            <button id="searchBtn">Search</button>
+        </div>
+        <!-- Utility Buttons -->
+        <div class="utility-buttons">
+            <button id="unitToggle">°C / °F</button>
+            <button id="geoBtn">Use My Location</button>
+            <button id="refreshBtn">Refresh</button>
+            <button id="aqiToggle">Air Quality</button>
+            <button id="modeToggle">Day/Night</button>
+        </div>
+    </header>
+
+    <div class="weather-now">
+        <h2><span id="temp">27°C</span> <span class="feels-like">(Feels like <span id="feelsLike">31°C</span>)</span></h2>
+        <p id="weatherDescription">Clear with periodic clouds</p>
+        <div class="weather-details">
+            <div class="detail-item">
+                <img src="icons/precip.png" alt="Precipitation Icon" class="weather-icon">
+                <p id="precip">Precip: 0%</p>
+            </div>
+            <div class="detail-item">
+                <img src="icons/humidity.png" alt="Humidity Icon" class="weather-icon">
+                <p id="humidity">Humidity: 87%</p>
+            </div>
+            <div class="detail-item">
+                <img src="icons/wind.png" alt="Wind Icon" class="weather-icon">
+                <p id="wind">Wind: 6 kph</p>
+            </div>
+        </div>
+        <p class="cooling-message">Cooling expected over the next 6 days</p>
+        <!-- Air Quality Index (Hidden by Default) -->
+        <div id="airQuality" class="air-quality hidden">
+            <p>Air Quality Index: <span id="aqi">Good</span></p>
+        </div>
+    </div>
+
+    <div class="forecast-container">
+        <div class="hourly-forecast">
+            <h3>3-Hour Forecast</h3>
+            <div class="hourly-scroll">
+                <!-- Hourly forecast data will be injected here -->
+            </div>
+        </div>
+
+        <div class="daily-forecast">
+            <h3>3-Day Forecast</h3>
+            <div class="daily-scroll">
+                <!-- 3-day forecast data will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="background">
+        <img src="backgrounds/clear-day.png" alt="Weather Background" id="dynamicBackground">
+    </div>
+</body>
+</html
